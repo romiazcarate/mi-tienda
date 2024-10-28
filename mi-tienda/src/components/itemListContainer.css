@@ -1,0 +1,10 @@
+/* components/ItemListContainer.css */
+.item-list-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.item-list-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}

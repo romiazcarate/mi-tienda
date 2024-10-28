@@ -1,10 +1,11 @@
 import React from 'react';
+import './cartWidget.css';
 
 const CartWidget = () => {
     return (
         <div className="cart-widget">
-            <img src="ruta-a-tu-icono-de-carrito.png" alt="Carrito" />
-            <span>0</span> {/* Cambia el número según el estado del carrito */}
+            <img src="/carrito.png" alt="Carrito" />
+            <span>0</span> 
         </div>
     );
 };
