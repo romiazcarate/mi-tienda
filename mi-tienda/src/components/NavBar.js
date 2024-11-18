@@ -1,15 +1,25 @@
 import React from 'react';
 import CartWidget from './CartWidget';
 import './navBar.css';
+import { Link } from 'react-router-dom';
+
+const categories = ['Color unico', 'Colores varios', 'Pintura total'];
+
 
 const NavBar = () => {
     return (
         <nav className="navbar">
             <div className="logo">Mi Tienda</div>
             <ul className="nav-links">
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                {categories.map((category) => (
+                    <li key={category}>
+                        <Link to={`/category/${category.toLowerCase()}`}>
+                            {category}
+                        </Link>
+                    </li>
+                ))}
+                <li><Link to="#contacto">Contacto</Link></li>
+                <li><Link to="#sobre-nosotros">Sobre Nosotros</Link></li>
             </ul>
             <CartWidget />
         </nav>
